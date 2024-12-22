@@ -1,0 +1,55 @@
+<odoo>
+    <data>
+        <record id="school_carrers_search_view" model="ir.ui.view">
+            <field name="name">carrer.search.view</field>
+            <field name="model">school.carreers</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="Product" />
+                    <field name="description" />
+                </search>
+            </field>
+        </record>
+
+        <record id="school_carreer_tree_view" model="ir.ui.view">
+            <field name="name">carrer.tree.view</field>
+            <field name="model">school.carreers</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="Product" />
+                    <field name="description" />
+                </tree>
+            </field>
+        </record>
+
+        <record id="school_carreer_form_view" model="ir.ui.view">
+            <field name="name">carreer.form.view</field>
+            <field name="model">school.carreers</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="Product" />
+                            <field name="description" />
+                            <field name="active" />
+                        </group>
+                        <notebook>
+                            <page string="Subjects">
+                                <field name="subjects"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="carreer_action" model="ir.actions.act_window">
+            <field name="name">Théme</field>
+            <field name="res_model">school.carreers</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+
+    </data>
+</odoo>

@@ -1,0 +1,228 @@
+<odoo>
+  <data>
+
+    <record id="student_search_view" model="ir.ui.view">
+      <field name="name">student.search.view</field>
+      <field name="model">school.student</field>
+      <field name="arch" type="xml">
+        <search>
+          <field name="partner_id" />
+          <field name="tuition"
+            filter_domain="['|',('tuition', 'ilike', self), ('tuition', '=', self)]" />
+          <field name="teacher" />
+          <!-- <field name="teacher_assistant" /> -->
+          <field name="tag" />
+          <group expand="0" string="School info">
+            <filter name="virtual_modality" string="Online"
+              domain="[('modality', '=' , 'virtual')]" />
+            <filter name="insitu_modality" string="Presencial"
+              domain="[('modality', '=' , 'insitu')]" />
+            <filter name="archvied" string="Archives"
+              domain="[('active', '!=' , 'true')]" />
+            <filter name="modality" string="Modality" domain="[('modality', '=' , 'self')]"
+              context="{'group_by':'modality'}" />
+            <filter name="carreers" string="Carreer" domain="[('carreers', '=' , 'self')]"
+              context="{'group_by':'carreers'}" />
+            <filter name="teacher" string="Formateur" domain="[('teacher', '=' , 'self')]"
+              context="{'group_by':'teacher'}" />
+            <filter name="state" string="Status" domain="[('state', '=' , 'self')]"
+              context="{'group_by':'state'}" />
+          </group>
+          <group expand="0" string="School info">
+            <filter name="city" string="City" domain="[('city','=','self')]"
+              context="{'group_by':'city'}" />
+            <filter name="state_id" string="State" domain="[('state_id', '=' , 'self')]"
+              context="{'group_by':'state_id'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="student_tree_view" model="ir.ui.view">
+      <field name="name">student.tree.view</field>
+      <field name="model">school.student</field>
+      <field name="arch" type="xml">
+        <tree decoration-success="state=='done'">
+          <field name="name" />
+          <field name="company_name" string="Société"></field>
+          <field name="teacher" string="Formateur"/>
+          <!-- <field name="teacher_assistant" /> -->
+          <field name="carreers" />
+          <field name="modality" />
+          <field name="state" invisible="0" />
+          <field name="Type_formation"></field>
+        </tree>
+      </field>
+    </record>
+
+    <record id="student_form_view" model="ir.ui.view">
+      <field name="name">student.form.view</field>
+      <field name="model">school.student</field>
+      <field name="arch" type="xml">
+
+        <form>
+          <header>
+            <button class="btn btn-primary" type="object" string="Ongoing"
+              name="action_ongoing"
+              invisible="state != 'draft'" />
+            <button class="btn btn-primary" type="object" string="Finalized" name="action_done"
+              invisible="state != 'ongoing'" />
+            <button class="btn" confirm="Are you sure you want to mark it as Expelled?" type="object" string="Expelled"
+              name="action_expelled"
+              invisible="state != 'ongoing'" />
+            <button class="btn" type="object" confirm="Are you sure you want to mark it as Abandoned?" string="Abandoned"
+              name="action_abandoned"
+              invisible="state != 'ongoing'" /> 
+            <button type="object" string="Back to Not started" name="action_draft"
+              invisible="state not in ('done','expelled','abandoned')" />
+            <field widget="statusbar" readonly="0" name="state"
+              statusbar_visible="draft, ongoing, done, abandoned, expelled" />
+          </header>
+          <sheet>
+
+            <div class="d-flex justify-content-between">
+              <div>
+                <label for="tuition" string="Matricul" />
+                <div>
+                  <field name="tuition" class="fs-1 mb-4"
+                    readonly="state in 'done'" />
+                </div>
+              </div>
+              <field name="image" widget="image" class="oe_avatar"
+                readonly="state in 'done'" />
+            </div>
+            <group>
+              <group class="">
+                <field name="partner_id" readonly="state in 'done'" />
+              </group>
+              <group>
+                <field name="course" readonly="state in 'done'"
+                  help="Complete only the course number" />
+              </group>
+              <group>
+                <field name="carreers" readonly="state in 'done'" />
+              </group>
+              <group>
+                <field name="Type_formation" />
+              </group>
+
+            </group>
+            <notebook>
+              <page string="Personal data">
+                <group>
+
+                  <group>
+                    <field name="street" />
+                    <field name="zip" />
+                    <field name="city" />
+                    <field name="state_id" />
+                    <field name="country_id" />
+                  </group>
+                  <group>
+                    <field name="phone" />
+                    <field name="mobile" />
+                    <field name="email" />
+                    <field name="alias" decoration-danger="alias" />
+                  </group>
+                </group>
+              </page>
+              <page string="Subjects">
+                <field name="subjects" />
+                <!-- <button type="object" class="btn btn-danger" string="Hola como andas capo"
+                  name="action_hola_como_andas" /> -->
+              </page>
+              <page string="Formateur">
+                <group>
+                  <field name="teacher" string="Formateur"/>
+                  <!-- <field name="teacher_assistant" /> -->
+                </group>
+              </page>
+              <page string="Other information">
+                <group>
+                  <field name="inscription_date" string="Inscription date" />
+                </group>
+                <group>
+                  <field name="date_debut" />
+                </group>
+                <group>
+                  <field name="date_fin" />
+                </group>
+                <group>
+                  <field name="tag" widget="many2many_tags" readonly="state in 'done'"
+                    options="{'color_field': 'color'}" />
+                </group>
+                <group>
+                  <field name="modality" />
+                </group>
+                <group>
+                  <field name="active" />
+                </group>
+              </page>
+            </notebook>
+          </sheet>
+          <div class="oe_chatter">
+            <field widget="mail_thread" name="message_ids" />
+            <field widget="mail_activity" name="activity_ids" />
+          </div>
+        </form>
+      </field>
+    </record>
+
+    <record id="student_kanban_view" model="ir.ui.view">
+      <field name="name">school.kanban.view</field>
+      <field name="model">school.student</field>
+      <field name="arch" type="xml">
+        <kanban class="o_kanban_mobile" sample="1">
+          <templates>
+            <t t-name="kanban-box">
+              <div t-attf-class="oe_kanban_global_click">
+                <div class="row">
+                  <div class="col-12">
+                    <strong>
+                      <div>
+                        <field name="name" />
+                      </div>
+                    </strong>
+                    <div>
+                      <field name="carreers" />
+                    </div>
+
+                  </div>
+                </div>
+                <div>
+                  <hr class="my-2" />
+                    <strong>Enrollment</strong>: <field name="tuition" />
+                </div>
+                <div>
+                  <field name="city" />, <field name="state_id" />, <field name="country_id" />  
+                  <field
+                    class="mt-2" name="tag" />
+                    <field name="activity_ids" widget="kanban_activity"/>
+                </div>
+              </div>
+            </t>
+          </templates>
+        </kanban>
+      </field>
+    </record>
+
+    <record id="student_pivot_view" model="ir.ui.view">
+      <field name="name">student.pivot.view</field>
+      <field name="model">school.student</field>
+      <field name="arch" type="xml">
+        <pivot>
+          <!-- Campos para usar en filas y columnas -->
+
+        </pivot>
+      </field>
+    </record>
+
+    <record id="student_action" model="ir.actions.act_window">
+      <field name="name">Participant</field>
+      <field name="res_model">school.student</field>
+      <field name="view_mode">search,tree,form,kanban,pivot</field>
+    </record>
+
+
+  </data>
+</odoo>
