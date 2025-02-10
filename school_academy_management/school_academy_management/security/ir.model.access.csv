@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_school_school,school.student,model_school_student,base.group_user,1,1,1,1
-access_school_student_tag,school.tag,model_school_tag,base.group_user,1,1,1,1
-access_school_student_carreers,school.carreers,model_school_carreers,base.group_user,1,1,1,1
-access_school_student_subjects,school.subjects,model_school_subjects,base.group_user,1,1,1,1

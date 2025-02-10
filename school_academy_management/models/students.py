@@ -7,7 +7,7 @@ class Student(models.Model):
     _name = "school.student"
     _description = "Participants"
     _inherit = ['mail.thread', 'mail.activity.mixin']
-    _order ="name asc"
+    _order ="inscription_date asc"
 
     partner_id = fields.Many2one('res.partner', string="Name", required=True)
     company_name = fields.Char(related='partner_id.commercial_company_name' ,string="Société")
@@ -23,7 +23,9 @@ class Student(models.Model):
     state_id= fields.Many2one(related='partner_id.state_id', string="State", store=True)
     email = fields.Char(related='partner_id.email', string="Email", store=True)
     zip = fields.Char(related='partner_id.zip', string="ZIP", store=True)
-    tuition = fields.Char(string="Enrollment", copy=False, tracking=20, required=True)
+    # tuition = fields.Integer(string="Enrollment", readonly=True, copy=False, default=0)
+    
+    tuition = fields.Char(string="Enrollment", copy=False, tracking=20, default=lambda self: _("Nouveau"), required=True)
     inscription_date = fields.Date(string="Inscription date")
     carreers = fields.Many2one('school.carreers',string="Théme", required=True)
     subjects = fields.Many2many('school.subjects')
@@ -66,6 +68,15 @@ class Student(models.Model):
 
     def action_expelled(self):
         self.state = "expelled"
+
+    @api.model
+    def create(self, vals):
+        for vals in vals:
+            if vals.get("tuition", _("Nouveau")) == _("Nouveau"):
+                vals["name"] = self.env["ir.sequence"].next_by_code(
+                        "school.student", vals.get("inscription_date")) or _("Nouveau")
+        return super(Student, self).create(vals)
+    
 
     # @api.depends('alias')
     # def _inverse_alias(self):

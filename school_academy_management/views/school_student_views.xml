@@ -1,14 +1,26 @@
 <odoo>
   <data>
 
+
+   <record id="school_student_tuition_sequence" model="ir.sequence">
+      <field name="name">Inscription Number</field>
+      <field name="code">school.student</field>
+      <field name="prefix">P</field>
+      <field name="padding">5</field>
+      <!-- <field name="number_next">1</field> -->
+    </record>
+
     <record id="student_search_view" model="ir.ui.view">
       <field name="name">student.search.view</field>
       <field name="model">school.student</field>
       <field name="arch" type="xml">
         <search>
           <field name="partner_id" />
+          
           <field name="tuition"
             filter_domain="['|',('tuition', 'ilike', self), ('tuition', '=', self)]" />
+
+
           <field name="teacher" />
           <!-- <field name="teacher_assistant" /> -->
           <field name="tag" />
@@ -82,7 +94,7 @@
 
             <div class="d-flex justify-content-between">
               <div>
-                <label for="tuition" string="Matricul" />
+                <label for="tuition" string="Enrollment" />
                 <div>
                   <field name="tuition" class="fs-1 mb-4"
                     readonly="state in 'done'" />
