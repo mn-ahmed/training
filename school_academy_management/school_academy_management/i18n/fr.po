@@ -1,0 +1,540 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* school_academy_management
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20241029\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-16 14:46+0000\n"
+"PO-Revision-Date: 2024-12-16 16:28+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: francais\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_kanban_view
+msgid "<strong>Enrollment</strong>:"
+msgstr "<strong>Inscription</strong>:"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__state__abandoned
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Abandoned"
+msgstr "Abandonné"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_needaction
+msgid "Action Needed"
+msgstr ""
+"Action Requise\n"
+"\n"
+"\n"
+"\n"
+"\n"
+"\n"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__active
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__active
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__active
+msgid "Active"
+msgstr "Active"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_ids
+msgid "Activities"
+msgstr "Activités"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "Décoration d'Exception d'Activité "
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_state
+msgid "Activity State"
+msgstr "État de l'Activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_type_icon
+msgid "Activity Type Icon"
+msgstr "Icône de Type d'Activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_res_partner__alias
+#: model:ir.model.fields,field_description:school_academy_management.field_res_users__alias
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__alias
+#: model_terms:ir.ui.view,arch_db:school_academy_management.view_partner_form_alias
+msgid "Alias"
+msgstr "Alias"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "Archives"
+msgstr "Archives"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Are you sure you want to mark it as Abandoned?"
+msgstr "Êtes-vous sûr de vouloir le marquer comme abandonné ?"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Are you sure you want to mark it as Expelled?"
+msgstr "Êtes-vous sûr de vouloir le marquer comme expulsé ?"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_attachment_count
+msgid "Attachment Count"
+msgstr "Nombre de pièces jointes"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Back to Not started"
+msgstr "Retour à Non commencé"
+
+#. module: school_academy_management
+#: model:ir.actions.act_window,name:school_academy_management.carreer_action
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__carreers
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__carreer
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "Carreer"
+msgstr "Théme"
+
+#. module: school_academy_management
+#: model:ir.ui.menu,name:school_academy_management.carreer_menu
+msgid "Carreers"
+msgstr "Théme"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__city
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "City"
+msgstr "Ville"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__color
+msgid "Color"
+msgstr "Couleur"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Complete only the course number"
+msgstr "Complétez uniquement le numéro du cours"
+
+#. module: school_academy_management
+#: model:ir.model,name:school_academy_management.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__country_id
+msgid "Country"
+msgstr "Pays"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__course
+msgid "Course"
+msgstr "Cours"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__create_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__create_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__create_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__create_uid
+msgid "Created by"
+msgstr "Créé par"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__create_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__create_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__create_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__create_date
+msgid "Created on"
+msgstr "Créé le"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__description
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__description
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__description
+msgid "Description"
+msgstr "Description"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__display_name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__display_name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__display_name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__display_name
+msgid "Display Name"
+msgstr "Nom d'affichage"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__state__done
+msgid "Done"
+msgstr "Terminé"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__email
+msgid "Email"
+msgstr "Email"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__tuition
+msgid "Enrollment"
+msgstr "Inscription"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__estimated_graduate_date
+msgid "Estimated graduation date"
+msgstr "Date de graduation estimée"
+
+#. module: school_academy_management
+#: model:ir.model,name:school_academy_management.model_school_tag
+msgid "Etiquetas para alumnos"
+msgstr "Étiquettes pour les élèves"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__state__expelled
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Expelled"
+msgstr "Expulsé"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__final_project
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Final project"
+msgstr "Projet final"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Finalized"
+msgstr "Finalisé"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_follower_ids
+msgid "Followers"
+msgstr "Abonnés"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Abonnés (Partenaires)"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__activity_type_icon
+msgid "Font awesome icon e.g. fa-tasks"
+msgstr "Icône Font Awesome (par exemple, fa-tasks)"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__graduate_date
+msgid "Graduation date"
+msgstr "Date de graduation"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__has_message
+msgid "Has Message"
+msgstr "A un message"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__id
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__id
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__id
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__id
+msgid "ID"
+msgstr "ID"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_exception_icon
+msgid "Icon"
+msgstr "Icône"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "Icône pour indiquer une activité exceptionnelle."
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "Si coché, les nouveaux messages nécessitent votre attention."
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Si coché, certains messages ont une erreur de livraison."
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__image
+msgid "Image"
+msgstr "Image"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__inscription_date
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Inscription date"
+msgstr "Date d'inscription"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_is_follower
+msgid "Is Follower"
+msgstr "Est un abonné"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__write_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__write_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__write_uid
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__write_uid
+msgid "Last Updated by"
+msgstr "Dernière mise à jour par"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__write_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__write_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__write_date
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__write_date
+msgid "Last Updated on"
+msgstr "Dernière mise à jour le"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Matricul"
+msgstr "Matricule"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_has_error
+msgid "Message Delivery error"
+msgstr "Erreur de livraison du message"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_ids
+msgid "Messages"
+msgstr "Messages"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__mobile
+msgid "Mobile"
+msgstr "Mobile"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__modality
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "Modality"
+msgstr "Modalité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__my_activity_date_deadline
+msgid "My Activity Deadline"
+msgstr "Ma date limite d'activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__partner_id
+#: model:ir.model.fields,field_description:school_academy_management.field_school_subjects__name
+#: model:ir.model.fields,field_description:school_academy_management.field_school_tag__name
+msgid "Name"
+msgstr "Nom"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "Prochaine date limite d'activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_summary
+msgid "Next Activity Summary"
+msgstr "Résumé de la prochaine activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_type_id
+msgid "Next Activity Type"
+msgstr "Type de prochaine activité"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__state__draft
+msgid "Not started"
+msgstr "Non commencé"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Nombre d'actions"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__message_has_error_counter
+msgid "Number of errors"
+msgstr "Nombre d'erreurs"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__message_needaction_counter
+msgid "Number of messages requiring action"
+msgstr "Nombre de messages nécessitant une action"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Nombre de messages avec une erreur de livraison"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__state__ongoing
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Ongoing"
+msgstr "En cours"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "Online"
+msgstr "En ligne"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Other information"
+msgstr "Autres informations"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Personal data"
+msgstr "Données personnelles"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__phone
+msgid "Phone"
+msgstr "Téléphone"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__modality__insitu
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "Presencial"
+msgstr "En présentiel"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__activity_user_id
+msgid "Responsible User"
+msgstr "Utilisateur responsable"
+
+#. module: school_academy_management
+#: model:ir.ui.menu,name:school_academy_management.menu_school
+msgid "School"
+msgstr "Formation"
+
+#. module: school_academy_management
+#: model:ir.model,name:school_academy_management.model_school_carreers
+msgid "School carreers"
+msgstr "Carrières scolaires"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "School info"
+msgstr "Les informations "
+
+#. module: school_academy_management
+#: model:ir.model,name:school_academy_management.model_school_subjects
+msgid "School subjects"
+msgstr "Matières scolaires"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__beca
+msgid "Scolarship"
+msgstr "Bourse d'études"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__state_id
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_search_view
+msgid "State"
+msgstr "État"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__state
+msgid "Status"
+msgstr "Statut"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"Statut basé sur les activités\n"
+"En retard : La date limite est déjà passée\n"
+"Aujourd'hui : La date de l'activité est aujourd'hui\n"
+"Planifié : Activités futures"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__street
+msgid "Street"
+msgstr "Rue"
+
+#. module: school_academy_management
+#: model:ir.ui.menu,name:school_academy_management.menu_student_list
+msgid "Students"
+msgstr "Participants"
+
+#. module: school_academy_management
+#: model:ir.actions.act_window,name:school_academy_management.subjects_action
+#: model:ir.model.fields,field_description:school_academy_management.field_school_carreers__subjects
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__subjects
+#: model:ir.ui.menu,name:school_academy_management.subjects_menu
+#: model_terms:ir.ui.view,arch_db:school_academy_management.school_carreer_form_view
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Subjects"
+msgstr "Matières"
+
+#. module: school_academy_management
+#: model:ir.model,name:school_academy_management.model_school_student
+msgid "Tabla de estudiantes"
+msgstr "Tableau des étudiants"
+
+#. module: school_academy_management
+#: model:ir.actions.act_window,name:school_academy_management.student_tag_action
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__tag
+#: model:ir.ui.menu,name:school_academy_management.student_tag_menu
+msgid "Tags"
+msgstr "Étiquettes"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__teacher
+msgid "Teacher"
+msgstr "Formateur"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__teacher_assistant
+msgid "Teacher assistant"
+msgstr "Assistant(e) pédagogique"
+
+#. module: school_academy_management
+#: model_terms:ir.ui.view,arch_db:school_academy_management.student_form_view
+msgid "Teachers"
+msgstr "Formateurs"
+
+#. module: school_academy_management
+#: model:ir.model.constraint,message:school_academy_management.constraint_school_student_check_tuition
+msgid "The registration number must be unique"
+msgstr "Le numéro d'inscription doit être unique"
+
+#. module: school_academy_management
+#: model:ir.model.fields,help:school_academy_management.field_school_student__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "Type de l'activité exceptionnelle enregistrée"
+
+#. module: school_academy_management
+#: model:ir.model.fields.selection,name:school_academy_management.selection__school_student__modality__virtual
+msgid "Virtual"
+msgstr "Virtuel"
+
+#. module: school_academy_management
+#: model:ir.model.fields,field_description:school_academy_management.field_school_student__zip
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: school_academy_management
+#: model:ir.actions.act_window,name:school_academy_management.student_action
+msgid "students"
+msgstr "Participants"
