@@ -1,6 +1,15 @@
 <odoo>
   <data>
 
+
+   <record id="school_student_tuition_sequence" model="ir.sequence">
+      <field name="name">Tuition Number</field>
+      <field name="code">school.student.tuition</field>
+      <field name="prefix">P</field>
+      <field name="padding">8</field>
+      <field name="number_next">1</field>
+    </record>
+
     <record id="student_search_view" model="ir.ui.view">
       <field name="name">student.search.view</field>
       <field name="model">school.student</field>

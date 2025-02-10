@@ -23,7 +23,8 @@ class Student(models.Model):
     state_id= fields.Many2one(related='partner_id.state_id', string="State", store=True)
     email = fields.Char(related='partner_id.email', string="Email", store=True)
     zip = fields.Char(related='partner_id.zip', string="ZIP", store=True)
-    tuition = fields.Integer(string="Enrollment", readonly=True, copy=False)
+    tuition = fields.Integer(string="Enrollment", readonly=True, copy=False, default=0)
+    
     # tuition = fields.Char(string="Enrollment", copy=False, tracking=20, required=True)
     inscription_date = fields.Date(string="Inscription date")
     carreers = fields.Many2one('school.carreers',string="Théme", required=True)
@@ -70,8 +71,9 @@ class Student(models.Model):
 
     @api.model
     def create(self, vals):
-        last_matricule = self.search([], order="tuition desc", limit=1).tuition or 0
-        vals['tuition'] = last_matricule + 1
+        if 'tuition' not in vals or vals['tuition'] == 0:
+            last_record = self.search([], order="tuition desc", limit=1)
+            vals['tuition'] = last_record.tuition + 1 if last_record else 1
         return super(Student, self).create(vals)
     
 
