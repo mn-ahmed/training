@@ -71,10 +71,10 @@ class Student(models.Model):
 
     @api.model
     def create(self, vals):
-        for vals in vals:
-            if vals.get("tuition", _("Nouveau")) == _("Nouveau"):
-                vals["name"] = self.env["ir.sequence"].next_by_code(
-                        "school.student", vals.get("inscription_date")) or _("Nouveau")
+        if vals.get("tuition", _("Nouveau")) == _("Nouveau"):
+            vals["name"] = self.env["ir.sequence"].next_by_code(
+                "school.student"
+            ) or _("Nouveau")
         return super(Student, self).create(vals)
     
 
